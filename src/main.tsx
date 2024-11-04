@@ -12,6 +12,8 @@ import { Padre } from './07-tarea-memo/Padre'
 // import { MultipleCustomHook } from './03-examples/MultipleCustomHook'
 // import { FocusScreen } from './04-useRef/FocusScreen'
 // import { Memorize } from './06-memos/Memorize'
+// import './08-useReducer/intro-reducer'
+import { TodoApp } from './08-useReducer/TodoApp'
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
@@ -27,6 +29,7 @@ createRoot(document.getElementById('root')!).render(
         {/* <Memorize /> */}
         {/* <MemoHook /> */}
         {/* <CallbackHook /> */}
-        <Padre />
+        {/* <Padre /> */}
+        <TodoApp />
     </StrictMode>
 )
