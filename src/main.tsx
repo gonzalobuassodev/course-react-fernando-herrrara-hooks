@@ -7,7 +7,8 @@ import './index.css'
 // import { SimpleForm } from './02-useEffect/SimpleForm'
 // import { FormWithUseHook } from './02-useEffect/FormWithUseHook'
 // import { MultipleCustomHook } from './03-examples/MultipleCustomHook'
-import { FocusScreen } from './04-useRef/FocusScreen'
+// import { FocusScreen } from './04-useRef/FocusScreen'
+import { Memorize } from './06-memos/Memorize'
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')!).render(
         {/* <FormWithUseHook /> */}
 
         {/* <MultipleCustomHook /> */}
-        <FocusScreen />
+        {/* <FocusScreen /> */}
+        <Memorize />
     </StrictMode>
 )
