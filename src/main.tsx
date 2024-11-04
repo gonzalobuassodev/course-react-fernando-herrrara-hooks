@@ -7,16 +7,18 @@ import './index.css'
 // import { SimpleForm } from './02-useEffect/SimpleForm'
 // import { FormWithUseHook } from './02-useEffect/FormWithUseHook'
 import { MultipleCustomHook } from './03-examples/MultipleCustomHook'
+import { FocusScreen } from './04-useRef/FocusScreen'
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    {/* <HookApp />
+    <StrictMode>
+        {/* <HookApp />
     <CounterApp />
     <CounterWithCustomHook />
     <SimpleForm /> */}
 
-    {/* <FormWithUseHook /> */}
+        {/* <FormWithUseHook /> */}
 
-    <MultipleCustomHook />
-  </StrictMode>,
+        {/* <MultipleCustomHook /> */}
+        <FocusScreen />
+    </StrictMode>
 )
