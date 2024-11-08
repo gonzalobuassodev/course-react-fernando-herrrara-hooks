@@ -1,38 +1,37 @@
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useState } from 'react';
 
 interface Values {
-    username: string;
-    email: string;
-    password: string;
+  name: string;
+  email: string;
+  password: string;
 }
 
 const initialValues: Values = {
-    username: '',
-    email: '',
-    password: ''
-}
+  name: '',
+  email: '',
+  password: '',
+};
 
-export const useForm = () => {
-    const [formState, setFormState] = useState<Values>(initialValues)
+export const useForm = (initialForm: Values) => {
+  const [formState, setFormState] = useState<Values>(initialForm);
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = e.target
-        setFormState({
-            ...formState,
-            [name]: value,
-        })
-    }
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
 
-    const onResetForm = () => {
-        setFormState(initialValues)
-    }
+  const onResetForm = () => {
+    setFormState(
+      initialValues);
+  };
 
-    return {
-
-        ...formState,
-        formState,
-        handleChange,
-        onResetForm
-
-    }
-}
+  return {
+    ...formState,
+    formState,
+    handleChange,
+    onResetForm,
+  };
+};

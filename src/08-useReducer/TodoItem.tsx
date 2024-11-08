@@ -21,6 +21,7 @@ export const TodoItem = ({
             <span
                 className={`text-black ${todo.done ? 'line-through' : ''}`}
                 onClick={() => handleToggleTodo(todo.id)}
+                aria-label='span'
             >
                 {todo.description}
             </span>

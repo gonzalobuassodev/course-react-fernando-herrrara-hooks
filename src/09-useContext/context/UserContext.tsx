@@ -7,8 +7,8 @@ export interface User {
 }
 
 export interface UserContextType {
-    user: User
-    setUser: React.Dispatch<React.SetStateAction<User>>
+    user: User | null
+    setUser: React.Dispatch<React.SetStateAction<User | null>>
 }
 
 export const UserContext = createContext<UserContextType | null>(null)

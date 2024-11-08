@@ -1,5 +1,11 @@
 import { useContext } from 'react'
-import { UserContext } from './context/UserContext'
+import { User, UserContext } from './context/UserContext'
+
+const initialUser: User = {
+    id: 123,
+    name: "Gonzalo Buasso",
+    email: "gonzalobuasso@gmail.com",
+};
 
 export const LoginPage = () => {
     const { user, setUser } = useContext(UserContext)!
@@ -11,11 +17,7 @@ export const LoginPage = () => {
             <h1>{user?.name}</h1>
             <button
                 onClick={() =>
-                    setUser({
-                        id: 123,
-                        name: 'Gonzalo Buasso',
-                        email: 'gonzalobuasso@gmail.com',
-                    })
+                    setUser(initialUser)
                 }
                 className="p-4 bg-blue-500 hover:bg-blue-800"
             >
